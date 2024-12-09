@@ -18,23 +18,32 @@ public class Paddle {
     }
 
     public void move1(KeyEvent event) {
-        switch (event.getCode()) {
-            case W:
-                velocityY = -speed; // Move up
-                break;
-            case S:
-                velocityY = speed; // Move down
-                break;
+        try{
+            switch (event.getCode()) {
+                case W:
+                    velocityY = -speed; // Move up
+                    break;
+                case S:
+                    velocityY = speed; // Move down
+                    break;
+            }
+        }catch(Exception a){
+            System.out.println("Something went wrong.");
         }
     }
+    
     public void move2(KeyEvent event) {
-        switch (event.getCode()) {
-            case UP:
-                velocityY = -speed; // Move up (for second paddle)
-                break;
-            case DOWN:
-                velocityY = speed; // Move down (for second paddle)
-                break;
+        try{
+            switch (event.getCode()) {
+                case UP:
+                    velocityY = -speed; // Move up (for second paddle)
+                    break;
+                case DOWN:
+                    velocityY = speed; // Move down (for second paddle)
+                    break;
+            }   
+        }catch(Exception a){
+            System.out.println("Something went wrong.");
         }
     }
 
