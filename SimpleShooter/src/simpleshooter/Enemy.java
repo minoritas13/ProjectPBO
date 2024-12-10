@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package simpleshooter;
-
 /**
  *
  * @author lutfi
@@ -28,7 +27,6 @@ public class Enemy{
             enemyImage = new Image("simpleshooter/enemy.png");
         }
 	}
-	
 	private boolean checkCollision(){
 		for (int i = 0; i < SimpleShooter.enemies.size(); i++){
 			Enemy e = SimpleShooter.enemies.get(i);
@@ -40,11 +38,9 @@ public class Enemy{
 		}
 		return false;
 	}
-	
 	public boolean collided(double x, double y, double w1, double w2){
 		return Math.sqrt(Math.pow(this.x+w1/2-x-w2/2, 2)+Math.pow(this.y+w1/2-y-w2/2, 2)) <= w1/2+w2/2;
 	}
-	
 	public void render(GraphicsContext gc){
 		gc.drawImage(enemyImage, this.x, this.y, WIDTH, WIDTH);
 		double distance = Math.sqrt(Math.pow(this.x-this.player.getX(), 2)+Math.pow(this.y-this.player.getY(), 2));
