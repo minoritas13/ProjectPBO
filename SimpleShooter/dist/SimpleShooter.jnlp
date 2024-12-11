@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SimpleShooter.jnlp">
+  <information>
+    <title>SimpleShooter</title>
+    <vendor>lutfi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SimpleShooter.jar" size="3150091" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="simpleshooter.SimpleShooter"  name="SimpleShooter" />
+  <update check="always"/>
+</jnlp>
